@@ -17,15 +17,17 @@ String name = JOptionPane.showInputDialog("What's your name?");
 System.out.println(name.toUpperCase());
 		// 3. Loop through each character of the name (steps 4 - 6).
 //    HINT: Use .length() to determine the number of characters in the String.
-String goof = "u goof";
+
 
 for (int i = 0; i < name.length(); i++) {
-	String namee = name.substring(i); 
+	String namee = name.substring(i,i+1); 
 	if(i%2==0) {
-	goof = namee.toUpperCase();
-	}	
+	goofyName += namee.toUpperCase();
+	}else {
+	goofyName+=namee;
 	}
-JOptionPane.showMessageDialog(null,goof);
+	}
+JOptionPane.showMessageDialog(null,goofyName);
 
 			// 4. Create a String variable to store the next character of the name
 			//    using .substring(start, end)
